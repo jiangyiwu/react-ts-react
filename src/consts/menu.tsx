@@ -9,6 +9,7 @@ import { Textures } from '../feature/journey/Textures'
 import { FontLoaderView } from '../feature/journey/FontLoader'
 import { LightView } from '../feature/journey/Light'
 import { Shadow } from '../feature/journey/Shadow'
+import { Journey } from '../feature/journey'
 
 export const menu:MenuInfo[] = [
   {
@@ -60,5 +61,10 @@ export const menu:MenuInfo[] = [
     path: '/shadow',
     title: 'shadow',
     page: <Shadow />
+  },
+  {
+    path: '/journey',
+    title: 'journey',
+    page: <Journey />
   },
 ]
