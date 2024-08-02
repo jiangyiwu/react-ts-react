@@ -18,7 +18,7 @@ export const useParticlesAnimation = () => {
   const count = 50000
   const positions = new Float32Array(count * 3) //  每个点由3个坐标组成
   const colors = new Float32Array(count * 3) // 每个颜色由三个rgb组成
-  Array.from({length: count * 3}).forEach((_, i) => {
+  Array.from({ length: count * 3 }).forEach((_, i) => {
     positions[i] = (Math.random() - 0.5) * 10
     colors[i] = Math.random()
   })
@@ -61,23 +61,23 @@ export const useParticlesAnimation = () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-  listenResize({width: window.innerWidth, height: window.innerHeight}, camera, renderer)
+  listenResize({ width: window.innerWidth, height: window.innerHeight }, camera, renderer)
 
   const clock = new THREE.Clock()
   const tick = () => {
     stats.begin()
 
     const elapsedTime = clock.getElapsedTime()
-    for (let i = 0; i < count; i+= 1) {
+    for (let i = 0; i < count; i += 1) {
       const x = particlesGeometry.attributes.position.getX(i)
-      particlesGeometry.attributes.position.setY(i, Math.sin(elapsedTime+x))
+      particlesGeometry.attributes.position.setY(i, Math.sin(elapsedTime + x))
     }
     particlesGeometry.attributes.position.needsUpdate = true
 
     controls.update()
 
     renderer.render(scene, camera)
-    
+
     stats.end()
     requestAnimationFrame(tick)
   }

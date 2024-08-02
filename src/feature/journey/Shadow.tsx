@@ -206,14 +206,14 @@ export const Shadow = () => {
       spotLightCameraHelper.visible = true
     },
   }
-  
+
   guiObj.hideAllHelpers()
-  
+
   gui.add(guiObj, 'turnOffAllLights')
   gui.add(guiObj, 'turnOnAllLights')
   gui.add(guiObj, 'hideAllHelpers')
   gui.add(guiObj, 'showAllHelpers')
-  
+
   gui.close()
 
   useEffect(() => tick())

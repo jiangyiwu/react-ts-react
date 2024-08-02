@@ -41,14 +41,14 @@ export const useParticles = () => {
   renderer.setSize(window.innerWidth, window.innerHeight)
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-  listenResize({width: window.innerWidth, height: window.innerHeight}, camera, renderer)
+  listenResize({ width: window.innerWidth, height: window.innerHeight }, camera, renderer)
 
   const tick = () => {
     stats.begin()
     controls.update()
     pointMaterial.needsUpdate = true
     renderer.render(scene, camera)
-    
+
     stats.end()
     requestAnimationFrame(tick)
   }
