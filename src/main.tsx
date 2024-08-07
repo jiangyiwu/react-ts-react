@@ -3,5 +3,8 @@ import App from './App.tsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('mainCanvas')!).render(
-  <App />
+  <>
+    <canvas id="mainCanvas" className="webgl"></canvas>
+    <App />
+  </>
 )

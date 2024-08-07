@@ -10,6 +10,7 @@ import { FontLoaderView } from '../feature/journey/FontLoader'
 import { LightView } from '../feature/journey/Light'
 import { Shadow } from '../feature/journey/Shadow'
 import { Journey } from '../feature/journey'
+import { ScrollAnimation } from '../feature/journey/scrollAnimation/ScrollAnimation'
 
 export const menu:MenuInfo[] = [
   {
@@ -66,5 +67,10 @@ export const menu:MenuInfo[] = [
     path: '/journey',
     title: 'journey',
     page: <Journey />
+  },
+  {
+    path: '/scrollAnimation',
+    title: 'scrollAnimation',
+    page: <ScrollAnimation />
   },
 ]

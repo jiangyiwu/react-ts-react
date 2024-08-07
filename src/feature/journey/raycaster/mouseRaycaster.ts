@@ -7,7 +7,7 @@ import dat from 'dat.gui'
 export const useMouseRaycaster = () => {
   const canvas = document.querySelector('#mainCanvas') as HTMLCanvasElement
   const scene = new THREE.Scene()
-
+  console.info(canvas, '==canvas==')
   const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
@@ -78,14 +78,19 @@ export const useMouseRaycaster = () => {
     y: number | null
   } = { x: null, y: null }
 
-  window.addEventListener('mousemove', (event) => {
+  // window.addEventListener('mousemove', (event) => {
+  //   mouse.x = (event.clientX / sizes.width) * 2 - 1
+  //   mouse.y = -(event.clientY / sizes.height) * 2 + 1
+  // })
+  // window.addEventListener('touchmove', (event) => {
+  //   const { clientX, clientY } = event.touches[0]
+  //   mouse.x = (clientX / sizes.width) * 2 - 1
+  //   mouse.y = -(clientY / sizes.height) * 2 + 1
+  // })
+
+  window.addEventListener('click', (event) => {
     mouse.x = (event.clientX / sizes.width) * 2 - 1
     mouse.y = -(event.clientY / sizes.height) * 2 + 1
-  })
-  window.addEventListener('touchmove', (event) => {
-    const { clientX, clientY } = event.touches[0]
-    mouse.x = (clientX / sizes.width) * 2 - 1
-    mouse.y = -(clientY / sizes.height) * 2 + 1
   })
 
   const tick = () => {
