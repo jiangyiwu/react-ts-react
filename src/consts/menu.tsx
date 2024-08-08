@@ -11,6 +11,8 @@ import { LightView } from '../feature/journey/Light'
 import { Shadow } from '../feature/journey/Shadow'
 import { Journey } from '../feature/journey'
 import { ScrollAnimation } from '../feature/journey/scrollAnimation/ScrollAnimation'
+import { Physics } from '../feature/physics'
+import { PhysicsCannonEs } from '../feature/physics/physicsCannonEs'
 
 export const menu:MenuInfo[] = [
   {
@@ -72,5 +74,15 @@ export const menu:MenuInfo[] = [
     path: '/scrollAnimation',
     title: 'scrollAnimation',
     page: <ScrollAnimation />
+  },
+  {
+    path: '/physics',
+    title: 'physics',
+    page: <Physics />
+  },
+  {
+    path: '/physicsEs',
+    title: 'physicsEs',
+    page: <PhysicsCannonEs />
   },
 ]

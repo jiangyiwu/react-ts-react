@@ -52,6 +52,9 @@ dependencies:
     version: 3.15.1
 
 devDependencies:
+  '@types/cannon':
+    specifier: ^0.1.13
+    version: 0.1.13
   '@types/dat.gui':
     specifier: ^0.7.13
     version: 0.7.13
@@ -708,6 +711,10 @@ packages:
 
   /@tweenjs/tween.js@23.1.2:
     resolution: {integrity: sha512-kMCNaZCJugWI86xiEHaY338CU5JpD0B97p1j1IKNn/Zto8PgACjQx0UxbHjmOcLl/dDOBnItwD07KmCs75pxtQ==}
+    dev: true
+
+  /@types/cannon@0.1.13:
+    resolution: {integrity: sha512-Yf5nvCblc/PHGA8/wtTOFd1AdS1EhFmHpyPL/tWRk1CRoFAb0M9Kj52dMUwxmNGAguAeS+9siiNi/hk03hhUEA==}
     dev: true
 
   /@types/dat.gui@0.7.13:
